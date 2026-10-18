@@ -11,9 +11,13 @@ dpi = { version = "0.1", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 parking_lot = "0.12.5"
 getrandom = { version = "0.4", features = ["std"] }
-
-
 image = { version = "0.25.10", default-features = false, features = ["png", "ico"] }
+
+
+# linux
+[target.'cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "openbsd", target_os = "netbsd"))'.dependencies]
+gtk = { version = "0.18", features = ["v3_24"] }
+
 
 # Desktop only
 [target.'cfg(any(target_os = "linux",target_os = "dragonfly",target_os = "freebsd",target_os = "openbsd",target_os = "netbsd",target_os = "windows",target_os = "macos"))'.dependencies]
