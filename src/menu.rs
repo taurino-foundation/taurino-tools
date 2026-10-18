@@ -1,5 +1,6 @@
 use dpi::Position;
-use muda::{ContextMenu as MudaContextMenu, MenuId};
+use muda::ContextMenu as MudaContextMenu;
+pub use muda::MenuId;
 use parking_lot::Mutex;
 use serde::Deserialize;
 use std::{collections::HashMap, sync::Arc};
